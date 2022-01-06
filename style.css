@@ -1,81 +1,188 @@
 
-.navbar{
-    display: flex;
-    flex-direction:row;
-    justify-content:space-between;
-    margin: 13px 0px 13px 134px;
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  .recipes {
+    color: black;
+  }
+  nav {
     height: 90px;
-}
-.nav2{
-    display: flex;
-    flex-direction:row;
-    margin: 33px 163px 32px 0px;
-}
-.nav_home{
-    background-color:#00B158;
-    width: 94px;
-    height: 34px;
-    border: none;
-    border-radius: 17px;
-    margin: 0px 30px;
-    
-}
-.nav_recipes{
-    background-color: transparent;
-    width: 94px;
-    height: 34px;
-    border: none;
-    border-radius: 17px;
-}
-.body_img{
-    margin:0px;
+    width: 100%;
+  }
+  nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li {
+    display: inline-block;
+    line-height: 90px;
+    margin: 0 5px;
+  }
+  nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+  a.active,
+  a:hover {
+    background: #00b158;
+  }
+  .checkbtn {
+    font-size: 30px;
+    float: right;
+    line-height: 90px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+  }
+  #check {
+    display: none;
+  }
+  @media (max-width: 952px) {
+    label.logo {
+      padding-left: 50px;
+    }
+    nav ul li a {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 90px;
+      background: #2c3e50;
+      top: 90px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 15px;
+    }
+    a:hover,
+    a.active {
+      background: none;
+      color: #00b158;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+  .container {
+    background-image: url("img/leo-roza-P_z_xlMGuEk-unsplash@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     width: 100%;
     height: 600px;
-}
-.our_recipes{
+  }
+  .site_title {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+    font-family: sans-serif;
+  }
+  .site_title h1 {
+    font-size: 60px;
+    color: #ab9e9e;
+    text-align: center;
+    margin: 0;
+  }
+  .site_title input {
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 6px;
+    margin-top: 10px;
+  }
+  .overlay {
+    background: #0000008a;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .gallery {
+    border: 1px solid #ccc;
+  }
+  .gallery img {
+    width: 100%;
+    height: 100%;
+  }
+  .des {
+    padding: 15px;
+    text-align: center;
+  }
+  .responsive {
+    padding: 0 35px;
+    float: left;
+    width: 30%;
+ }
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 50%;
+      margin: 35px 0 40px 0;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  .our_recipes{
     display: flex;
     justify-content: center;
     margin: 53px 0px 0px 0px;
     color:#00B158;
     font-size: 20px;
-}
-.pop_recipes{
+  }
+  .pop_recipes{
     margin: 0px 0px 18px 0px;
     display: flex;
     justify-content: center;
     color:#17285A;
     font-size: 38px;
-}
-.add_button{
-    font-size: 16px;
-    height: 45px;
-    display: flex;
-    justify-content:flex-end;
-    margin: 0px 132px 0px 0px;
-}
-.add{
+  }
+  .add{  
+    text-align:center;
+    font-size: 38px;
     background-color:#00B158;
     border: none;
     border-radius: 23px;
     font-size: 16px;
     color: white;
     padding: 11px 42px 11px 43px;
-}
-li{
-    width: 343px;
-    list-style-type: none;
-    padding: 0px 35px 40px 0px;
-}
-.item_img{
-    width: 343px;
-    height: 233px;
-}
-.item_list{
-    background-color:whitesmoke;
-}
-ul{
-    width: 100%;
+    width: 187px;
+    height: 45px;
+  }
+  .Add_Recipes{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+    justify-content: flex-end;
+    margin: 18px 134px 40px 0;
+  }
+  .all_img{
+    background: blue;
+  }
